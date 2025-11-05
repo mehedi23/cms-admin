@@ -27,7 +27,7 @@ const navItems = [
     ],
   },
   { key: 'shop', label: 'Shop', icon: StorefrontIcon, to: '/shop' },
-  { key: 'orders', label: 'Orders', icon: StorefrontIcon, to: '/orders' },
+  { key: 'orders', label: 'Orders', icon: ReceiptLongIcon, to: '/orders' },
   { key: 'settings', label: 'Settings', icon: SettingsIcon, to: '/settings' },
 ]
 

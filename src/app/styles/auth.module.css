@@ -1,0 +1,119 @@
+/* Auth page styles: centered card, subtle shadows, clean inputs and social buttons */
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f7f9fb 0%, #ffffff 100%);
+  padding: 48px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(8, 24, 48, 0.06);
+  padding: 28px;
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.form {
+  margin-top: 6px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid #e6eef6;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+}
+.input:focus {
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.08);
+  border-color: #3b82f6;
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 10px 12px;
+  background: linear-gradient(180deg,#111827 0%, #0b1220 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(8,24,48,0.08);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #eef2f6;
+}
+.divider span { font-size: 13px; color: #94a3b8 }
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.socialBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #eef2f6;
+  background: #fff;
+  cursor: pointer;
+  color: #0f172a;
+}
+.socialBtn img { width: 18px; height: 18px }
+
+.muted { color: #64748b; font-size: 13px }
+.smallLink { color: #0ea5e9; text-decoration: none; font-weight: 600 }
+
+.bottomText { margin-top: 14px; text-align: center; font-size: 13px; color: #64748b }
+
+@media (max-width: 480px) {
+  .card { padding: 18px; border-radius: 10px }
+}
+
+/* Error text for form validation */
+.errorText { color: #dc2626; font-size: 12px; margin-top: 6px }
+
+/* Actions row for form submit / links */
+.formActions { display: flex; justify-content: space-between; align-items: center; margin-top: 6px }
+
+/* Row used in email verification for resend + link */
+.resendRow { display: flex; gap: 8px; margin-top: 12px; align-items: center }
+.resendLink { align-self: center }
+
