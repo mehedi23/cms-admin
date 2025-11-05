@@ -1,0 +1,98 @@
+/* SideNav styles - simple layout to match the attached image
+	 - vertical sidebar with logo at top
+	 - nav items with subtle hover and active states
+*/
+
+.sidenav {
+	width: 240px;
+	height: 100vh;
+	background: #ffffff;
+	border-right: 1px solid #eef2f6;
+	padding: 20px 16px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.logoWrap {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px 4px;
+	margin-bottom: 18px;
+}
+
+.logoBox {
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	background: linear-gradient(135deg,#06b6d4,#3b82f6);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+}
+
+.brand {
+	font-size: 14px;
+	font-weight: 600;
+	color: #1f2937;
+}
+
+.navList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.navItem {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.navLink {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	padding: 10px 12px;
+	color: #374151;
+	text-decoration: none;
+	font-size: 14px;
+	transition: background 120ms ease, color 120ms ease;
+}
+
+.navItem:hover .navLink {
+	background: #f8fafc;
+}
+
+.icon {
+	width: 28px;
+	height: 28px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+}
+
+.label {
+	display: inline-block;
+}
+
+.active .navLink {
+	background: #e6f6ff;
+	color: #0369a1;
+	box-shadow: inset 3px 0 0 0 #60a5fa;
+}
+
+/* Responsive: collapse to narrower width on small screens (optional) */
+@media (max-width: 768px) {
+	.sidenav {
+		width: 72px;
+		padding: 12px 8px;
+	}
+	.brand, .label { display: none; }
+}
