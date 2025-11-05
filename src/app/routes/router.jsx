@@ -11,6 +11,10 @@ export const AllPages = () => {
             element: <Layout />,
             children: [
                 ...dashboardRoutes,
+                {
+                    path: '*',
+                    element: 'No page found as',
+                },
             ],
         },
         {

@@ -3,8 +3,13 @@
 	 - nav items with subtle hover and active states
 */
 
+.layout{
+    display: flex;
+}
+
 .sidenav {
 	width: 240px;
+	min-width: 240px;
 	height: 100vh;
 	background: #ffffff;
 	border-right: 1px solid #eef2f6;
@@ -31,7 +36,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: 700;
+	font-weight: 900;
+	font-size: 18px;
+	letter-spacing: 0.6px;
 }
 
 .brand {
@@ -62,6 +69,7 @@
 	color: #374151;
 	text-decoration: none;
 	font-size: 14px;
+    font-weight: 500;
 	transition: background 120ms ease, color 120ms ease;
 }
 
@@ -92,7 +100,73 @@
 @media (max-width: 768px) {
 	.sidenav {
 		width: 72px;
+		min-width: 72px;
 		padding: 12px 8px;
 	}
 	.brand, .label { display: none; }
 }
+
+/* hamburger button (top area) */
+.hamburger {
+	margin-left: auto;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	color: #475569;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px;
+}
+
+/* child list styles (nested under parents) */
+.childList {
+	list-style: none;
+	padding: 6px 6px 6px 44px;
+	margin: 6px 0 0 0;
+	display: none;
+	flex-direction: column;
+	gap: 4px;
+}
+.childItem {
+	border-radius: 6px;
+}
+.childLink {
+	display: block;
+	padding: 8px 10px;
+	color: #475569;
+	text-decoration: none;
+	font-size: 13px;
+}
+.childLink:hover { background: #f8fafc; }
+.childList.open { display: flex; }
+
+/* ensure a standalone .open class exists for CSS module mapping */
+.open { display: flex !important; }
+
+/* collapsed sidebar - narrow */
+.collapsed {
+	width: 72px;
+	min-width: 72px;
+	padding: 12px 8px;
+}
+.collapsed .brand { display: none; }
+.collapsed .label { display: none; }
+.collapsed .expandIcon { display: none; }
+.collapsed .navItem { position: relative; }
+
+/* child overlay when collapsed: absolute to the right of the sidebar */
+.childCollapsed {
+	position: absolute;
+	left: 72px;
+	top: 0;
+	min-width: 180px;
+	background: #fff;
+	border: 1px solid #e6eef6;
+	box-shadow: 0 6px 18px rgba(8,24,48,0.08);
+	padding: 8px 0;
+	z-index: 1200;
+}
+
+.expandIcon { margin-left: auto; color: #94a3b8; }
+.openParent > .navLink { background: #f1f9ff; }
