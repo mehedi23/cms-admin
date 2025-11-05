@@ -1,11 +1,7 @@
 /* SideNav styles - simple layout to match the attached image
-	 - vertical sidebar with logo at top
-	 - nav items with subtle hover and active states
+ 	 - vertical sidebar with logo at top
+ 	 - nav items with subtle hover and active states
 */
-
-.layout{
-    display: flex;
-}
 
 .sidenav {
 	width: 240px;
@@ -140,6 +136,18 @@
 }
 .childLink:hover { background: #f8fafc; }
 .childList.open { display: flex; }
+
+/* label inside child links (used in JSX as styles.childLabel) */
+.childLabel {
+    display: inline-block;
+}
+
+/* active state for child links to match parent active styling */
+.childItem.active .childLink {
+	background: #e6f6ff;
+	color: #0369a1;
+	box-shadow: inset 3px 0 0 0 #60a5fa;
+}
 
 /* ensure a standalone .open class exists for CSS module mapping */
 .open { display: flex !important; }

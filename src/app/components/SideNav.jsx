@@ -100,13 +100,18 @@ function SideNav() {
                       : undefined
                   }
                 >
-                  {item.children.map((child) => (
-                    <li key={child.key} className={styles.childItem}>
-                      <Link to={child.to} className={styles.childLink}>
-                        <span className={styles.childLabel}>{child.label}</span>
-                      </Link>
-                    </li>
-                  ))}
+                  {item.children.map((child) => {
+                    const childIsActive =
+                      child.to && (location.pathname === child.to || location.pathname.startsWith(`${child.to}/`))
+
+                    return (
+                      <li key={child.key} className={`${styles.childItem} ${childIsActive ? styles.active : ''}`}>
+                        <Link to={child.to} className={styles.childLink}>
+                          <span className={styles.childLabel}>{child.label}</span>
+                        </Link>
+                      </li>
+                    )
+                  })}
                 </ul>
               ) : null}
             </li>
