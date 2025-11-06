@@ -6,7 +6,9 @@ import styles from '@app/styles/layout.module.css'
 function Layout() {
   return (
     <div className={styles.layout}>
-      <SideNav />
+      <div className={styles.sidenavLayout}>
+        <SideNav />
+      </div>
       <div className={styles.content}>
         <Outlet />
       </div>

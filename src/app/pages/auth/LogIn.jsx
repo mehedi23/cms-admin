@@ -61,13 +61,13 @@ function LogIn() {
           </div>
 
           <div className={styles.formActions}>
-            <Link to="/forgot-password" className={styles.smallLink}>Forgot password?</Link>
             <button type="submit" className={styles.primaryBtn}>Sign in</button>
           </div>
         </form>
 
         <div className={styles.bottomText}>
-          Don't have an account? <Link to="/signup" className={styles.smallLink}>Sign up</Link>
+            <Link to="/forgot-password" className={styles.smallLink}>Forgot password?</Link> <br />
+            Don't have an account? <Link to="/signup" className={styles.smallLink}>Sign up</Link>
         </div>
       </div>
     </div>

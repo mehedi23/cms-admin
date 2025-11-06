@@ -3,6 +3,26 @@
  	 - nav items with subtle hover and active states
 */
 
+.layout{
+	display: flex;
+}
+
+.content{
+	flex-grow: 1;
+	padding: 20px;
+	background: #f9fafb;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+.sidenavLayout{
+	max-height: 100vh;
+	height: 100vh;
+	position: sticky;
+	top: 0;
+	overflow-y: auto;
+}
+
 .sidenav {
 	width: 240px;
 	min-width: 240px;
