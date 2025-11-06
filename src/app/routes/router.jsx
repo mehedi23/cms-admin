@@ -1,5 +1,6 @@
 import authRoutes from '@app/pages/auth/Routes';
 import dashboardRoutes from '@app/pages/dashboard/Routes';
+import productRoutes from '@app/pages/product/Routes';
 import Layout from '@app/components/Layout';
 import {Link } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ export const AllPages = () => {
             element: <Layout />,
             children: [
                 ...dashboardRoutes,
+                ...productRoutes,
             ],
         },
         {

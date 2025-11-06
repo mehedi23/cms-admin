@@ -1,0 +1,19 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin-bottom: 1rem;
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #172554; /* navy */
+	margin: 0;
+}
+
+.sub {
+	margin: 0;
+	color: #475569; /* slate */
+	font-size: 0.95rem;
+}

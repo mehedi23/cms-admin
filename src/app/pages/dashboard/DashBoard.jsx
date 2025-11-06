@@ -1,15 +1,16 @@
 import React from 'react'
 import styles from '@app/styles/dashboard.module.css'
 import StatCard from './components/StatCard'
+import PageHeading from '@app/components/atomic/PageHeading'
 
 
 function DashBoard() {
   return (
     <div className={`${styles.root} container`}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>Dashboard</h1>
-        <p className={styles.sub}>Overview of products and orders</p>
-      </header>
+      <PageHeading 
+        title="Dashboard" 
+        subtitle="Overview of products and orders"
+      />
 
       <section className={styles.grid}>
         <StatCard title="Total Products" value="50" accent="#3DBE29">
