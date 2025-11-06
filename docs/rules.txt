@@ -1,0 +1,4 @@
+- Use yarn
+- Use Tailwind css
+- If need to funcitonal UI like dropdown , dialog etc then use MUI and for cutomize use module.css
+- When importing, use the format "@app/path"

@@ -21,6 +21,8 @@
 	position: sticky;
 	top: 0;
 	overflow-y: auto;
+	min-width: 75px;
+	overflow-x: hidden;
 }
 
 .sidenav {
@@ -28,7 +30,6 @@
 	min-width: 240px;
 	height: 100vh;
 	background: #ffffff;
-	border-right: 1px solid #eef2f6;
 	padding: 20px 16px;
 	box-sizing: border-box;
 	display: flex;
@@ -112,15 +113,6 @@
 	box-shadow: inset 3px 0 0 0 #60a5fa;
 }
 
-/* Responsive: collapse to narrower width on small screens (optional) */
-@media (max-width: 768px) {
-	.sidenav {
-		width: 72px;
-		min-width: 72px;
-		padding: 12px 8px;
-	}
-	.brand, .label { display: none; }
-}
 
 /* hamburger button (top area) */
 .hamburger {
@@ -198,3 +190,19 @@
 
 .expandIcon { margin-left: auto; color: #94a3b8; }
 .openParent > .navLink { background: #f1f9ff; }
+
+
+/* Responsive: collapse to narrower width on small screens (optional) */
+@media (max-width: 768px) {
+	.sidenav {
+		width: 72px;
+		min-width: 72px;
+		padding: 12px 8px;
+	}
+	.brand, .label { display: none; }
+
+	.childList{
+		padding: 0;
+	}
+
+}

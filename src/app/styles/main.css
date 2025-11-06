@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import "tailwindcss";
+
 * {
     margin: 0;
     padding: 0;
@@ -9,4 +11,21 @@
 
 :root {
     --primary-color: #030712;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
 }
