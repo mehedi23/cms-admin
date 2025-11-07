@@ -4,12 +4,28 @@ import PageHeading from '@app/components/atomic/PageHeading'
 
 
 
-const rows = [
-  {'name': 'Frozen yoghurt', 'calories': 159, 'fat': 6.0, 'carbs': 24, 'protein': 4.0},
-  {'name': 'Ice cream sandwich', 'calories': 237, 'fat': 9.0, 'carbs': 37, 'protein': 4.3},
-  {'name': 'Eclair', 'calories': 262, 'fat': 16.0, 'carbs': 24, 'protein': 6.0},
-  {'name': 'Cupcake', 'calories': 305, 'fat': 3.7, 'carbs': 67, 'protein': 4.3},
-  {'name': 'Gingerbread', 'calories': 356, 'fat': 16.0, 'carbs': 49, 'protein': 3.9},
+const data = [
+  { id: 1, title: 'The Shawshank Redemption', director: 'Frank Darabont', year: '1994' },
+  { id: 2, title: 'The Godfather', director: 'Francis Ford Coppola', year: '1972' },
+  { id: 3, title: 'The Dark Knight', director: 'Christopher Nolan', year: '2008' },
+];
+
+const columns = [
+	{
+		name: 'Título',
+		selector: row => row.title,
+		sortable: true,
+	},
+	{
+		name: 'Director',
+		selector: row => row.director,
+		sortable: true,
+	},
+	{
+		name: 'Año',
+		selector: row => row.year,
+		sortable: true,
+	},
 ];
 
 function List() {
@@ -19,7 +35,7 @@ function List() {
         title="Products" 
         subtitle="Manage your products" 
       />
-      <Table rows={rows} />
+      <Table data={data} columns={columns} />
     </div>
   )
 }

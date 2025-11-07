@@ -20,8 +20,8 @@
 }
 
 .search{
-  flex:1 1 320px;
-  max-width:480px;
+  flex: 1;
+  max-width: 600px;
 }
 
 .toolbar{
@@ -30,11 +30,6 @@
   align-items:center;
 }
 
-.toggleButton{
-  border-radius:8px;
-  text-transform:none;
-  box-shadow: 0 1px 3px rgba(16,24,40,0.06);
-}
 
 .selectedCount{
   color:var(--muted);
@@ -43,12 +38,7 @@
   text-align:center;
 }
 
-.deleteButton{
-  border-radius:8px;
-  text-transform:none;
-  border-color: rgba(229, 57, 53, 0.85);
-  color: var(--danger);
-}
+
 
 .tableWrapper{
   background: var(--card);

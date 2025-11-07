@@ -4,30 +4,11 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import _ from 'lodash'
 import styles from './table.module.css'
+import {
+  PrimaryButton,
+  SecondaryButton
+} from '@app/components/atomic/Button';
 
-const data = [
-  { id: 1, title: 'The Shawshank Redemption', director: 'Frank Darabont', year: '1994' },
-  { id: 2, title: 'The Godfather', director: 'Francis Ford Coppola', year: '1972' },
-  { id: 3, title: 'The Dark Knight', director: 'Christopher Nolan', year: '2008' },
-];
-
-const columns = [
-	{
-		name: 'Título',
-		selector: row => row.title,
-		sortable: true,
-	},
-	{
-		name: 'Director',
-		selector: row => row.director,
-		sortable: true,
-	},
-	{
-		name: 'Año',
-		selector: row => row.year,
-		sortable: true,
-	},
-];
 
 const paginationComponentOptions = {
 	rowsPerPageText: 'Filas por página',
@@ -36,7 +17,10 @@ const paginationComponentOptions = {
 	selectAllRowsItemText: 'Todos',
 };
 
-function Table() {
+function Table({
+  data = [],
+  columns = []
+}) {
   // master dataset (so deletions persist) and the current table view
   const [allData, setAllData] = useState(data);
   const [tableData, setTableData] = useState(allData);
@@ -125,15 +109,14 @@ function Table() {
         />
 
         <div className={styles.toolbar}>
-          <Button
-            className={styles.toggleButton}
+          <PrimaryButton
             variant={multiSelectEnabled ? 'contained' : 'outlined'}
             color={multiSelectEnabled ? 'primary' : 'inherit'}
-            size="small"
             onClick={toggleMultiSelect}
           >
             {multiSelectEnabled ? 'Disable Multi-select' : 'Enable Multi-select'}
-          </Button>
+          </PrimaryButton>
+          
 
           {
             multiSelectEnabled &&
@@ -142,16 +125,12 @@ function Table() {
                 {selectedRows.length} selected
               </span>
 
-              <Button
-                className={styles.deleteButton}
-                variant="outlined"
-                color="secondary"
-                size="small"
+              <SecondaryButton
                 disabled={!multiSelectEnabled || selectedRows.length === 0}
                 onClick={deleteSelected}
               >
                 Delete Selected
-              </Button>
+              </SecondaryButton>
             </>
           }
 
